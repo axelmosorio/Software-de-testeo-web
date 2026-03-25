@@ -225,6 +225,10 @@ body.body_gestion {
     color: #333;
 }
 
+.titulo_gestion {
+    margin-bottom: 0;
+}
+
 .separador_menu,
 .separador_gestion {
     border: 0;
@@ -298,11 +302,51 @@ body.body_gestion {
     min-height: 400px;
 }
 
+.encabezados_recientes {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+    width: 100%;
+}
+
+.contador_casos {
+    background-color: #00aebb;
+    color: white;
+    padding: 4px 12px;
+    border-radius: 20px;
+    font-size: 14px;
+    font-weight: bold;
+    box-shadow: 0 2px 5px rgba(0, 174, 187, 0.3);
+    margin-right: 5px;
+}
+
 .lista_actividad {
     display: flex;
     flex-direction: column;
     gap: 15px; 
     margin-top: 10px;
+    max-height: 400px;
+    overflow-y: auto;
+    padding-right: 10px;
+}
+
+.lista_actividad::-webkit-scrollbar {
+    width: 6px;
+}
+
+.lista_actividad::-webkit-scrollbar-track {
+    background: #f1f1f1;
+    border-radius: 10px;
+}
+
+.lista_actividad::-webkit-scrollbar-thumb {
+    background: #ccc;
+    border-radius: 10px;
+}
+
+.lista_actividad::-webkit-scrollbar-thumb:hover {
+    background: #00aebb;
 }
 
 .elemento_actividad {
