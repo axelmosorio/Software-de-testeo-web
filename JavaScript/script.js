@@ -8,7 +8,7 @@ document.addEventListener('DOMContentLoaded', () => {
             if (user && password) {
                 event.preventDefault();
                 alert(`¡Bienvenido de nuevo, ${user}! Redirigiendo al menú...`);
-                window.location.href = 'menu_p.html'; 
+                window.location.href = '../Menu/menu_p.html'; 
             }
         });
     }
@@ -23,7 +23,7 @@ document.addEventListener('DOMContentLoaded', () => {
             if (email && username && password) {
                 event.preventDefault();
                 alert(`¡Gracias por registrarte, ${username}! Hemos enviado un correo a ${email}.`);
-                window.location.href = 'login.html';
+                window.location.href = '../Iniciar sesion y registro/login.html';
             }
         });
     }
@@ -36,7 +36,7 @@ document.addEventListener('DOMContentLoaded', () => {
             if (email) {
                 event.preventDefault();
                 alert(`Se ha enviado un enlace de recuperación a: ${email}`);
-                window.location.href = 'login.html';
+                window.location.href = '../Iniciar sesion y registro/login.html';
             }
         });
     }
@@ -45,7 +45,7 @@ document.addEventListener('DOMContentLoaded', () => {
     if (boton_cerrar) {
         boton_cerrar.addEventListener('click', () => {
             if (confirm('¿Estás seguro de que deseas cerrar sesión?')) {
-                window.location.href = 'login.html';
+                window.location.href = '../Iniciar sesion y registro/login.html';
             }
         });
     }
@@ -68,14 +68,14 @@ document.addEventListener('DOMContentLoaded', () => {
     const botonIrGestion = document.getElementById('boton_ir_gestion');
     if (botonIrGestion) {
         botonIrGestion.addEventListener('click', () => {
-            window.location.href = 'gestionar.html';
+            window.location.href = 'Gestionar casos/gestionar.html';
         });
     }
 
     const botonVolverMenu = document.getElementById('boton_volver_menu');
     if (botonVolverMenu) {
         botonVolverMenu.addEventListener('click', () => {
-            window.location.href = 'menu_p.html';
+            window.location.href = '../menu_p.html';
         });
     }
 
