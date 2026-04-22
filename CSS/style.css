@@ -87,7 +87,6 @@ body.body_gestion {
     background-color: #24a1a7;
 }
 
-.enlaces_secundario.registro,
 .enlaces_secundarios.registro {
     text-align: center; 
     margin-top: 30px;
@@ -289,6 +288,7 @@ body.body_gestion {
 }
 
 .cerrar_sesion:hover {
+    color: white;
     background: #ff4d4d; 
     box-shadow: 0 4px 12px rgba(255, 77, 77, 0.2);
 }
@@ -495,7 +495,7 @@ body.body_gestion {
 }
 
 .lista_pasos_creacion {
-    color: #667;
+    color: #555;
     font-size: 14px;
     line-height: 2;
     padding-left: 20px;
