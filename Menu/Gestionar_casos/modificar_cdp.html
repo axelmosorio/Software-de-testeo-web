@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modificar casos de prueba</title>
+    <link rel="stylesheet" href="../../CSS/style.css">
+    <script src="modificar_cdp.js" defer></script>
+</head>
+<body class="body_modificar">
+    <header class="header_modificar">
+        <div class="logo_marca_testeo">
+            <div class="icon_logo">S</div>
+            <div class="texto_marca">
+                <strong>Software INC</strong>
+                <span>(testeo)</span>
+            </div>
+        </div>
+        <div class="estado_administrador">
+            <span class="label_permisos">Permisos de administrador: </span>
+            <div class="indicador_activo">
+                <span class="puntero_activo"></span>
+                Activo
+            </div>
+        </div>
+        <div class="acciones_de_arriba">
+            <button class="boton_nav" id="boton_volver_gestionar">←</button>
+            <button class="boton_nav">→</button>
+            <button class="cerrar_sesion">Cerrar sesión</button>
+        </div>
+    </header>
+
+    <main class="contenedor_modificar">
+
+        <aside class="panel_lateral_modificar">
+            <div class="encabezado_lateral_modificar">
+                <h1 class="titulo_gestion">Modificar caso de prueba</h1>
+                <hr class="separador_gestion_lateral">
+            </div>
+            <input 
+                type="text" 
+                class="buscador_casos" 
+                id="buscador_casos" 
+                placeholder="Buscar caso de prueba..."
+            >
+            <div class="lista_casos_modificar" id="lista_casos">
+                <div class="item_caso" 
+                data-nombre="CDP-001 Login fallido"
+                data-contenido="Paso 1: Abrir el navegador
+Paso 2: Ir a la pantalla de login
+Paso 3: Ingresar usuario incorrecto
+Paso 4: Ingresar contraseña incorrecta
+Paso 5: Hacer clic en Iniciar
+Paso 6: Verificar mensaje de error">
+                    <span class="nombre_caso">CDP-001 Login fallido</span>
+                </div>
+                <div class="item_caso" 
+                data-nombre="CDP-002 Login exitoso" 
+                data-contenido="Paso 1: Abrir el navegador
+Paso 2: Ir a la pantalla de login
+Paso 3: Ingresar usuario correcto
+Paso 4: Ingresar contraseña correcta
+Paso 5: Hacer clic en Iniciar
+Paso 6: Verificar redirección al menú">
+                    <span class="nombre_caso">CDP-002 Login exitoso</span>
+                </div>
+                <div class="item_caso" 
+                data-nombre="CDP-003 Registro fallido" 
+                data-contenido="Paso 1: Abrir el navegador
+Paso 2: Ir a la pantalla de registro
+Paso 3: Dejar campos vacíos
+Paso 4: Hacer clic en Registrar
+Paso 5: Verificar mensaje de error">
+                    <span class="nombre_caso">CDP-003 Registro fallido</span>
+                </div>
+                <div class="item_caso" 
+                data-nombre="CDP-004 Registro exitoso" 
+                data-contenido="Paso 1: Abrir el navegador
+Paso 2: Ir a la pantalla de registro
+Paso 3: Completar todos los campos correctamente
+Paso 4: Hacer clic en Registrar
+Paso 5: Verificar redirección al login">
+                    <span class="nombre_caso">CDP-004 Registro exitoso</span>
+                </div>
+                <div class="item_caso" 
+                data-nombre="CDP-005 Módulo 1 creación exitosa" 
+                data-contenido="Paso 1: Iniciar sesión
+Paso 2: Ir a Gestionar casos
+Paso 3: Hacer clic en Crear caso
+Paso 4: Completar nombre y pasos
+Paso 5: Hacer clic en Ejecutar
+Paso 6: Verificar que el caso aparece en la lista">
+                    <span class="nombre_caso">CDP-005 Módulo 1 creación exitosa</span>
+                </div>
+            </div>
+        </aside>
+        <section class="panel_edicion_modificar">
+            <div class="encabezado_edicion_modificar">
+                <div class="campo_modificar_linea">
+                    <input 
+                        type="text" 
+                        id="nombre_caso_modificar" 
+                        placeholder="Selecciona un caso de prueba para editar"
+                        readonly
+                    >
+                </div>
+                <span class="badge_sin_cambios" id="badge_estado">Sin cambios</span>
+            </div>
+            <div class="area_texto_numerada_modificar" id="area_editor">
+                <div class="area_numeros_modificar" id="numeros_linea">
+                    <span>1.</span>
+                </div>
+                <textarea 
+                    class="textarea_modificar" 
+                    id="textarea_modificar" 
+                    placeholder="Selecciona un caso de la lista para editar su contenido..."
+                    disabled
+                ></textarea>
+            </div>
+            <div class="panel_acciones_modificar">
+                <button class="boton_ejecutar_modificar" id="boton_ejecutar">Ejecutar</button>
+                <button class="boton_resultado_modificar" id="boton_resultado">Resultado</button>
+                <button class="boton_automatizar_modificar" id="boton_automatizar">Automatizar</button>
+                <div class="separador_acciones"></div>
+                <button class="boton_cancelar_modificar" id="boton_cancelar">Cancelar</button>
+                <button class="boton_guardar_modificar" id="boton_guardar" disabled>Guardar cambios</button>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <div class="logo">
+            <img src="../../Imagenes/icono-software.png" alt="logo" class="icono_imagen">
+            <div class="texto_logo">
+                <p>SOFTWARE INC<br><span>Los mejores softwares</span></p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

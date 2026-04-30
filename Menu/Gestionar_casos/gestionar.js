@@ -22,6 +22,20 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
+    const botonIrCrear = document.getElementById('boton_ir_crear');
+    if (botonIrCrear) {
+        botonIrCrear.addEventListener('click', () => {
+            window.location.href = 'crear_cdp.html';
+        });
+    }
+
+    const botonIrModificar = document.getElementById('boton_ir_modificar');
+    if (botonIrModificar) {
+        botonIrModificar.addEventListener('click', () => {
+            window.location.href = 'modificar_cdp.html';
+        });
+    }
+
     function actualizarContador() {
         const elementos = document.querySelectorAll('.elemento_actividad');
         const contadorElemento = document.querySelector('.contador_casos');
