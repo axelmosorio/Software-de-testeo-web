@@ -21,4 +21,24 @@ document.addEventListener('DOMContentLoaded', () => {
             window.location.href = 'gestionar.html';
         });
     }
+
+    const textarea = document.getElementById('textarea_creacion');
+    const numerosLinea = document.getElementById('numeros_linea_creacion');
+    
+    function actualizarNumerosCreacion() {
+        const lineas = textarea.value === '' ? 1 : textarea.value.split('\n').length;
+        numerosLinea.innerHTML = '';
+        for (let i = 1; i <= lineas; i++) {
+            const span = document.createElement('span');
+            span.textContent = i + '.';
+            numerosLinea.appendChild(span);
+        }
+    }
+    
+    textarea.addEventListener('input', actualizarNumerosCreacion);
+    textarea.addEventListener('keydown', (e) => {
+        if (e.key === 'Enter') {
+            setTimeout(actualizarNumerosCreacion, 0);
+        }
+    });
 });

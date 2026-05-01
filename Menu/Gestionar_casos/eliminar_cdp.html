@@ -3,12 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Modificar casos de prueba</title>
+    <title>Eliminar casos de prueba</title>
     <link rel="stylesheet" href="../../CSS/style.css">
-    <script src="modificar_cdp.js" defer></script>
+    <script src="eliminar_cdp.js" defer></script>
 </head>
-<body class="body_modificar">
-    <header class="header_modificar">
+<body class="body_eliminar">
+    <header class="header_eliminar">
         <div class="logo_marca_testeo">
             <div class="icon_logo">S</div>
             <div class="texto_marca">
@@ -30,11 +30,11 @@
         </div>
     </header>
 
-    <main class="contenedor_modificar">
+    <main class="contenedor_eliminar">
 
-        <aside class="panel_lateral_modificar">
-            <div class="encabezado_lateral_modificar">
-                <h1 class="titulo_gestion">Modificar caso de prueba</h1>
+        <aside class="panel_lateral_eliminar">
+            <div class="encabezado_lateral_eliminar">
+                <h1 class="titulo_gestion">Eliminar caso de prueba</h1>
                 <hr class="separador_gestion_lateral">
             </div>
             <input 
@@ -43,7 +43,7 @@
                 id="buscador_casos" 
                 placeholder="Buscar caso de prueba..."
             >
-            <div class="lista_casos_modificar" id="lista_casos">
+            <div class="lista_casos_eliminar" id="lista_casos">
                 <div class="item_caso" 
                 data-nombre="CDP-001 Login fallido"
                 data-contenido="Paso 1: Abrir el navegador
@@ -94,8 +94,8 @@ Paso 6: Verificar que el caso aparece en la lista">
                 </div>
             </div>
         </aside>
-        <section class="panel_edicion_modificar">
-            <div class="encabezado_edicion_modificar">
+        <section class="panel_edicion_eliminar">
+            <div class="encabezado_edicion_eliminar">
                 <div class="campo_modificar_linea">
                     <input 
                         type="text" 
@@ -106,21 +106,21 @@ Paso 6: Verificar que el caso aparece en la lista">
                 </div>
                 <span class="badge_sin_cambios" id="badge_estado">Sin cambios</span>
             </div>
-            <div class="area_texto_numerada_modificar" id="area_editor">
-                <div class="area_numeros_modificar" id="numeros_linea">
+            <div class="area_texto_numerada_eliminar" id="area_editor">
+                <div class="area_numeros_eliminar" id="numeros_linea">
                     <span>1.</span>
                 </div>
                 <textarea 
-                    class="textarea_modificar" 
-                    id="textarea_modificar" 
+                    class="textarea_eliminar" 
+                    id="textarea_eliminar" 
                     placeholder="Selecciona un caso de la lista para editar su contenido..."
                     disabled
                 ></textarea>
             </div>
-            <div class="panel_acciones_modificar">
+            <div class="panel_acciones_eliminar">
                 <button class="boton_ejecutar" id="boton_ejecutar">Ejecutar</button>
                 <button class="boton_resultado" id="boton_resultado">Resultado</button>
-                <button class="boton_automatizar" id="boton_automatizar">Automatizar</button>
+                <button class="boton_eliminar" id="boton_eliminar">Eliminar</button>
                 <div class="separador_acciones"></div>
                 <button class="boton_cancelar" id="boton_cancelar">Cancelar</button>
                 <button class="boton_guardar" id="boton_guardar" disabled>Guardar cambios</button>

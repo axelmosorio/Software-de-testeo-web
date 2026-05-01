@@ -36,6 +36,13 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
+    const botonIrEliminar = document.getElementById('boton_ir_eliminar');
+    if (botonIrEliminar) {
+        botonIrEliminar.addEventListener('click', () => {
+            window.location.href = 'eliminar_cdp.html';
+        });
+    }
+
     function actualizarContador() {
         const elementos = document.querySelectorAll('.elemento_actividad');
         const contadorElemento = document.querySelector('.contador_casos');
