@@ -22,6 +22,13 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
+    const botonIrGenerarInformes = document.getElementById('boton_ir_generar_informes');
+    if (botonIrGenerarInformes) {
+        botonIrGenerarInformes.addEventListener('click', () => {
+            window.location.href = 'Generar_informes/generar.html';
+        });
+    }
+
     const opciones = document.querySelectorAll('.opcion_menu');
     opciones.forEach(opcion => {
         opcion.addEventListener('click', function() {

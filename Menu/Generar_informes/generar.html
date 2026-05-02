@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Generar informe de caso de prueba</title>
+    <link rel="stylesheet" href="../../CSS/style.css">
+    <script src="generar.js" defer></script>
+</head>
+<body class="body_informe">
+    <header class="header_informe">
+        <div class="logo_marca_testeo">
+            <div class="icon_logo">S</div>
+            <div class="texto_marca">
+                <strong>Software INC</strong>
+                <span>(testeo)</span>
+            </div>
+        </div>
+        <div class="estado_administrador">
+            <span class="label_permisos">Permisos de administrador: </span>
+            <div class="indicador_activo">
+                <span class="puntero_activo"></span>
+                Activo
+            </div>
+        </div>
+        <div class="acciones_de_arriba">
+            <button class="boton_nav" id="boton_volver_menu">←</button>
+            <button class="boton_nav">→</button>
+            <button class="cerrar_sesion">Cerrar sesión</button>
+        </div>
+    </header>
+    <main class="contenedor_informe">
+        <aside class="panel_lateral_informe">
+            <div class="encabezado_lateral_informe">
+                <h1 class="titulo_gestion">Generar informe de caso de prueba</h1>
+                <hr class="separador_gestion_lateral">
+            </div>
+            <input
+                type="text"
+                class="buscador_casos"
+                id="buscador_informe"
+                placeholder="Buscar caso de prueba..."
+            >
+            <div class="lista_casos_informe" id="lista_casos_informe">
+                <div class="item_caso"
+data-nombre="CDP-001 Login fallido"
+data-contenido="Paso 1: Abrir el navegador
+Paso 2: Ir a la pantalla de login
+Paso 3: Ingresar usuario incorrecto
+Paso 4: Ingresar contraseña incorrecta
+Paso 5: Hacer clic en Iniciar
+Paso 6: Verificar mensaje de error"
+data-errores="2"
+data-errores-lineas="2,4"
+data-resumen="Prueba de login con credenciales incorrectas. Se detectaron errores en la entrada de datos. Se recomienda validar los campos antes del envío.">
+                    <span class="nombre_caso">CDP-001 Login fallido</span>
+                </div>
+                <div class="item_caso"
+data-nombre="CDP-002 Login exitoso"
+data-contenido="Paso 1: Abrir el navegador
+Paso 2: Ir a la pantalla de login
+Paso 3: Ingresar usuario correcto
+Paso 4: Ingresar contraseña correcta
+Paso 5: Hacer clic en Iniciar
+Paso 6: Verificar redirección al menú"
+data-errores="0"
+data-errores-lineas=""
+data-resumen="Prueba de login con credenciales correctas. No se detectaron errores. El flujo de autenticación funciona correctamente.">
+                    <span class="nombre_caso">CDP-002 Login exitoso</span>
+                </div>
+                <div class="item_caso"
+data-nombre="CDP-003 Registro fallido"
+data-contenido="Paso 1: Abrir el navegador
+Paso 2: Ir a la pantalla de registro
+Paso 3: Dejar campos vacíos
+Paso 4: Hacer clic en Registrar
+Paso 5: Verificar mensaje de error"
+data-errores="3"
+data-errores-lineas="3,4,5"
+data-resumen="Prueba de registro con campos vacíos. Se encontraron múltiples errores de validación. Es necesario implementar validaciones en el frontend y backend.">
+                    <span class="nombre_caso">CDP-003 Registro fallido</span>
+                </div>
+                <div class="item_caso"
+data-nombre="CDP-004 Registro exitoso"
+data-contenido="Paso 1: Abrir el navegador
+Paso 2: Ir a la pantalla de registro
+Paso 3: Completar todos los campos correctamente
+Paso 4: Hacer clic en Registrar
+Paso 5: Verificar redirección al login"
+data-errores="0"
+data-errores-lineas=""
+data-resumen="Prueba de registro con datos válidos. No se detectaron errores. El flujo de creación de cuenta funciona según lo esperado.">
+                    <span class="nombre_caso">CDP-004 Registro exitoso</span>
+                </div>
+                <div class="item_caso"
+data-nombre="CDP-005 Módulo 1 creación exitosa"
+data-contenido="Paso 1: Iniciar sesión
+Paso 2: Ir a Gestionar casos
+Paso 3: Hacer clic en Crear caso
+Paso 4: Completar nombre y pasos
+Paso 5: Hacer clic en Ejecutar
+Paso 6: Verificar que el caso aparece en la lista"
+data-errores="1"
+data-errores-lineas="4"
+data-resumen="Prueba de creación de caso de prueba. Se detectó un error en el paso de completar los campos. Se recomienda revisar las validaciones del formulario.">
+                    <span class="nombre_caso">CDP-005 Módulo 1 creación exitosa</span>
+                </div>
+            </div>
+        </aside>
+        <section class="panel_resultado_informe" id="panel_resultado">
+            <div class="estado_vacio_informe" id="estado_vacio">
+                <span class="icono_vacio">📋</span>
+                <p>Selecciona un caso de prueba para ver su informe</p>
+            </div>
+            <div class="contenido_informe" id="contenido_informe" style="display:none;">
+                <div class="encabezado_resultado_informe">
+                    <h2 class="titulo_resultado_informe" id="titulo_informe">—</h2>
+                    <button class="boton_descargar" id="boton_descargar">
+                        ⬇ Descargar
+                    </button>
+                </div>
+                <div class="cuerpo_informe">
+                    <div class="columna_codigo_informe">
+                        <div class="area_texto_numerada_informe">
+                            <div class="area_numeros_informe" id="numeros_informe"></div>
+                            <div class="area_lineas_informe" id="lineas_codigo_informe"></div>
+                            <div class="area_marcadores_informe" id="marcadores_informe"></div>
+                        </div>
+                    </div>
+                    <div class="columna_metricas_informe">
+                        <div class="tarjeta_errores_informe">
+                            <span class="label_errores">Errores detectados</span>
+                            <span class="numero_errores" id="numero_errores">0</span>
+                        </div>
+                        <div class="tarjeta_resumen_informe">
+                            <h3 class="titulo_resumen">Resumen de la prueba</h3>
+                            <p class="texto_resumen" id="texto_resumen">—</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <div class="logo">
+            <img src="../Imagenes/icono-software.png" alt="logo" class="icono_imagen">
+            <div class="texto_logo">
+                <p>SOFTWARE INC<br><span>Los mejores softwares</span></p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
